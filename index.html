@@ -878,12 +878,15 @@ footer{
     box-shadow:0 -8px 24px rgba(0,0,0,.32);
     font-family:var(--sans);
   }
-  .sticky-cta a{
+  .sticky-cta a,
+  .sticky-cta button{
     display:flex;align-items:center;justify-content:center;gap:10px;
     height:64px;color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
     text-decoration:none;line-height:1;
+    border:none;cursor:pointer;font-family:inherit;
   }
-  .sticky-cta a svg{width:20px;height:20px}
+  .sticky-cta a svg,
+  .sticky-cta button svg{width:20px;height:20px}
   .sticky-cta .call{background:var(--orange)}
   .sticky-cta .wa{background:#25d366}
   .sticky-cta .call:active{background:var(--orange-deep)}
@@ -1667,10 +1670,10 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 
 <!-- ============ MOBILE STICKY CTA ============ -->
 <div class="sticky-cta" aria-label="Quick access">
-  <a class="call" href="tel:+905322822657" aria-label="Call now">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/></svg>
-    <span>Call Now</span>
-  </a>
+  <button type="button" class="call" data-cta="event_davet_form" aria-label="Open invitation request form">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <span>Join Now</span>
+  </button>
   <a class="wa" href="https://wa.me/905322822657?text=Hello%20Sami%2C%20I'd%20like%20more%20info." target="_blank" rel="noopener" aria-label="Write on WhatsApp">
     <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39-.077 0-.139-.027-.207-.066-.508-.252-.917-.452-1.391-.794-.474-.342-.929-.78-1.366-1.27a14.6 14.6 0 0 1-1.067-1.444c-.295-.461-.582-1.029-.582-1.578v-.06c.018-.502.318-.787.624-1.124.197-.218.413-.451.413-.696 0-.198-.057-.405-.142-.583-.142-.297-.295-.601-.443-.903-.142-.297-.275-.591-.434-.881-.149-.272-.317-.471-.624-.471-.099 0-.198.005-.297.005-.297 0-.598.025-.881.118-.532.169-.97.717-1.077 1.244-.045.218-.045.443-.045.665 0 .642.158 1.265.387 1.857.346.892.802 1.738 1.339 2.531.819 1.197 1.799 2.244 2.945 3.116.567.434 1.18.797 1.834 1.081.726.317 1.487.524 2.275.628.157.022.314.029.471.029.811 0 1.605-.207 2.207-.752.252-.228.461-.5.581-.83.115-.317.075-.602-.057-.892-.166-.366-.65-.575-1.013-.762-.408-.21-.834-.378-1.279-.502a2.59 2.59 0 0 0-.66-.09zM15.998 4.5c-6.347 0-11.498 5.151-11.498 11.498 0 2.083.563 4.105 1.626 5.874l.293.475-1.235 4.501 4.622-1.213.45.272a11.4 11.4 0 0 0 5.737 1.568h.005c6.347 0 11.498-5.151 11.498-11.498S22.345 4.5 15.998 4.5zm0 21.143h-.004a9.59 9.59 0 0 1-4.875-1.335l-.349-.207-3.62.95.967-3.527-.227-.361a9.55 9.55 0 0 1-1.463-5.165c.001-5.288 4.305-9.591 9.595-9.591 2.564 0 4.974.999 6.786 2.812a9.53 9.53 0 0 1 2.808 6.787c-.002 5.291-4.306 9.594-9.594 9.594z"/></svg>
     <span>WhatsApp</span>
@@ -1863,10 +1866,38 @@ document.addEventListener('DOMContentLoaded', () => {
 .dm-close-btn:hover{background:var(--ink);color:#fff}
 
 @media (max-width:600px){
-  .dm-card{padding:40px 26px 32px}
-  .dm-head h2{font-size:36px}
-  .dm-head .dm-sub{font-size:13px}
-  .dm-row.two{flex-direction:column;gap:18px}
+  .dm{padding:12px;align-items:flex-start;padding-top:calc(12px + env(safe-area-inset-top, 0px))}
+  .dm-card{
+    padding:28px 22px 24px;
+    max-height:calc(100vh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    width:100%;
+  }
+  .dm-head{margin-bottom:20px}
+  .dm-head h2{font-size:30px;line-height:1.05}
+  .dm-head .dm-sub{font-size:13px;line-height:1.5;margin-top:10px}
+  .dm-eye{font-size:9.5px;letter-spacing:.28em}
+  .dm-row.two{flex-direction:column;gap:14px}
+  .dm-form{gap:14px}
+  .dm-field span{font-size:11.5px}
+  .dm-field input,
+  .dm-field select{padding:11px 13px;font-size:14.5px}
+  .dm-consent{font-size:12px;gap:9px}
+  .dm-submit{height:48px;font-size:13px;letter-spacing:.16em}
+  .dm-close{top:12px;right:12px;width:32px;height:32px}
+  .dm-corner{width:14px;height:14px}
+  .dm-corner.tl,.dm-corner.tr{top:8px}
+  .dm-corner.tl,.dm-corner.bl{left:8px}
+  .dm-corner.tr,.dm-corner.br{right:8px}
+  .dm-corner.bl,.dm-corner.br{bottom:8px}
+}
+/* iPhone 17 Pro Max ve dar ekranlar için ekstra sıkıştırma */
+@media (max-width:430px){
+  .dm-card{padding:24px 18px 20px}
+  .dm-head h2{font-size:26px}
+  .dm-head{margin-bottom:16px}
+  .dm-form{gap:12px}
+  .dm-field input,
+  .dm-field select{padding:10px 12px;font-size:14px}
 }
 </style>
 
