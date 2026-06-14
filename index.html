@@ -412,13 +412,14 @@ nav.bar{
   z-index:1;
 }
 .hero-sound{
-  position:absolute;right:24px;top:88px;z-index:6;width:46px;height:46px;border-radius:50%;
-  border:1.5px solid rgba(255,255,255,.7);background:rgba(15,38,71,.62);color:#fff;
+  position:fixed;right:16px;top:106px;z-index:45;width:32px;height:32px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.65);background:rgba(15,38,71,.7);color:#fff;
   display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
-  box-shadow:0 4px 16px rgba(0,0,0,.4);transition:background .2s,border-color .2s,transform .2s;
+  box-shadow:0 3px 12px rgba(0,0,0,.45);transition:background .2s,border-color .2s,transform .2s;
 }
-.hero-sound:hover{background:rgba(15,38,71,.85);border-color:var(--gold);transform:translateY(-1px)}
-@media (max-width:760px){.hero-sound{right:16px;top:76px;width:40px;height:40px}}
+.hero-sound svg{width:15px;height:15px}
+.hero-sound:hover{background:rgba(10,27,52,.85);border-color:var(--gold)}
+@media (max-width:760px){.hero-sound{right:12px;top:100px;width:30px;height:30px}.hero-sound svg{width:14px;height:14px}}
 .hero::before{
   content:"";position:absolute;inset:0;z-index:2;
   background:
@@ -1190,13 +1191,13 @@ footer{
   .hero{padding-top:0;min-height:0;background:var(--ink-deep);display:flex;flex-direction:column}
   .hero .hero-img{
     position:relative;inset:auto;
-    width:100%;height:58vh;max-height:480px;min-height:340px;
-    object-position:75% 32%;
+    width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;
+    object-position:center;
     margin-top:calc(34px + 56px); /* top-strip + nav */
   }
   .hero::before{
     inset:calc(34px + 56px) 0 auto 0;
-    height:58vh;max-height:480px;min-height:340px;
+    aspect-ratio:16/9;height:auto;
     background:linear-gradient(180deg,
       rgba(10,27,52,.30) 0%,
       rgba(10,27,52,0) 22%,
