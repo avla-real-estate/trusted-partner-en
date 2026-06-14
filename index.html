@@ -361,6 +361,7 @@ nav.bar{
 .nav-links{display:flex;gap:30px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#fff;font-weight:500}
 .nav-links a{opacity:.85;transition:opacity .2s,color .2s}
 .nav-links a:hover{opacity:1;color:var(--gold-bright)}
+.lang-switch-m{display:none}
 .nav-links a.nav-flash{
   color:var(--orange);font-weight:700;opacity:1;
   animation:freq-text 2.4s ease-in-out infinite;
@@ -1196,6 +1197,7 @@ footer{
   .top-strip{height:34px}
   .nav-wrap{padding:10px 18px;gap:10px}
   .nav-links{display:none}
+  .lang-switch-m{display:inline-flex}
   .brand .avla-mark img{width:38px;height:38px}
   .brand .b-divider{height:28px}
   .brand .b-name{font-size:16px;white-space:nowrap}
@@ -1370,6 +1372,11 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
         <span aria-current="true" style="font-weight:600;opacity:1">EN</span>
       </span>
     </div>
+    <span class="lang-switch lang-switch-m" aria-label="Dil / Language" style="align-items:center;gap:7px;font-size:13px;letter-spacing:.08em;white-space:nowrap;margin-left:auto">
+      <a href="https://guvenilir-cozum-ortaginiz.avlarealestate.com/" hreflang="tr" rel="alternate" style="color:inherit;text-decoration:none;opacity:.6" aria-label="Türkçe">TR</a>
+      <span aria-hidden="true" style="opacity:.35">/</span>
+      <span aria-current="true" style="font-weight:600;opacity:1">EN</span>
+    </span>
   </div>
 </nav>
 
