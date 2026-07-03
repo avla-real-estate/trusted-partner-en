@@ -1309,6 +1309,28 @@ footer{
   .top-strip .ts-last{display:none}
   .top-strip .ts-sep-last{display:none}
 }
+
+/* Glifada Lansman video CTA (navy) */
+.glifada-cta-section{background:var(--ink-deep);padding:0 32px 90px}
+.glifada-cta{
+  display:block;position:relative;max-width:1080px;margin:0 auto;
+  min-height:230px;border-radius:12px;overflow:hidden;
+  text-decoration:none;color:#fff;
+  border:1px solid rgba(201,182,138,.28);
+  transition:transform .25s ease, box-shadow .25s ease;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+}
+.glifada-cta:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(0,0,0,.55)}
+.glifada-cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
+.glifada-cta:hover .glifada-cta-bg{transform:scale(1.03)}
+.glifada-cta-overlay{position:absolute;inset:0;background:linear-gradient(120deg, rgba(10,27,52,.92) 0%, rgba(10,27,52,.62) 55%, rgba(10,27,52,.88) 100%)}
+.glifada-cta-text{position:relative;display:flex;flex-direction:column;justify-content:center;padding:46px 50px;min-height:230px}
+.glifada-cta-label{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:12px}
+.glifada-cta-title{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.2vw,44px);line-height:1.1;color:#fff;margin:0}
+.glifada-cta-title em{font-style:italic;color:var(--gold)}
+.glifada-cta-sub{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.7vw,20px);color:rgba(255,255,255,.82);margin-top:12px;line-height:1.45;max-width:620px}
+.glifada-cta-arrow{margin-top:18px;font-size:15px;letter-spacing:.08em;color:var(--gold);font-weight:600}
+@media(max-width:640px){.glifada-cta-text{padding:34px 26px}}
 </style>
 
 <!-- Google Tag Manager (Avla — unified tracking) -->
@@ -1604,6 +1626,21 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
       </div>
     </aside>
   </div>
+</section>
+
+
+<!-- ============ GLYFADA LAUNCH CTA ============ -->
+<section class="glifada-cta-section" data-screen-label="04b Glyfada launch">
+  <a class="glifada-cta" href="https://www.youtube.com/shorts/VePiB5xxm-g" target="_blank" rel="noopener">
+    <div class="glifada-cta-bg" style="background-image:url('./img/glifada-lansman-thumb.jpg')"></div>
+    <div class="glifada-cta-overlay"></div>
+    <div class="glifada-cta-text">
+      <div class="glifada-cta-label">Glyfada Launch · Surprise</div>
+      <h3 class="glifada-cta-title">Glyfada <em>By the Sea</em></h3>
+      <div class="glifada-cta-sub">This month's guest — Zafido Holding Hellas' launch, exclusive to our meeting</div>
+      <div class="glifada-cta-arrow">Watch the teaser →</div>
+    </div>
+  </a>
 </section>
 
 <!-- ============ PHILOSOPHY PULL ============ -->
