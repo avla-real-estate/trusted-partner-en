@@ -10,8 +10,8 @@
 <meta property="og:title" content="M. Sami Akbeniz · Avla Real Estate · Greece Golden Visa">
 <meta property="og:description" content="Avla — monthly Greece Golden Visa investor meetings in Istanbul. By invitation, one-on-one format, with a guest Greek developer every month.">
 <meta property="og:url" content="https://trusted-partner.avlarealestate.com/">
-<meta property="og:image" content="https://trusted-partner.avlarealestate.com/img/og-cover.jpg">
-<meta property="og:image:secure_url" content="https://trusted-partner.avlarealestate.com/img/og-cover.jpg">
+<meta property="og:image" content="https://trusted-partner.avlarealestate.com/img/og-cover.jpg?v=19eylul">
+<meta property="og:image:secure_url" content="https://trusted-partner.avlarealestate.com/img/og-cover.jpg?v=19eylul">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1080">
 <meta property="og:image:type" content="image/jpeg">
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="M. Sami Akbeniz · Avla Real Estate · Greece Golden Visa">
 <meta name="twitter:description" content="Monthly Greece Golden Visa investor meetings in Istanbul — by invitation, with a guest Greek developer every month.">
-<meta name="twitter:image" content="https://trusted-partner.avlarealestate.com/img/og-cover.jpg">
+<meta name="twitter:image" content="https://trusted-partner.avlarealestate.com/img/og-cover.jpg?v=19eylul">
 
 <link rel="icon" type="image/jpeg" href="./img/avla-bird.jpg">
 <link rel="apple-touch-icon" href="./img/avla-bird.jpg">
@@ -86,7 +86,7 @@
   "alternateName": "Avla Real Estate",
   "url": "https://www.avlarealestate.com/",
   "logo": "https://trusted-partner.avlarealestate.com/img/avla-logo.png",
-  "image": "https://trusted-partner.avlarealestate.com/img/og-cover.jpg",
+  "image": "https://trusted-partner.avlarealestate.com/img/og-cover.jpg?v=19eylul",
   "telephone": "+90-216-470-53-81",
   "email": "realestate@avla.com.tr",
   "founder": {"@id": "https://trusted-partner.avlarealestate.com/#sami"},
@@ -128,7 +128,7 @@
   "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1M", "scheduleTimezone": "Europe/Istanbul"},
   "location": {"@type": "City", "name": "Istanbul"},
   "organizer": {"@type": "Organization", "name": "Avla Real Estate", "url": "https://www.avlarealestate.com"},
-  "image": "https://trusted-partner.avlarealestate.com/img/og-cover.jpg",
+  "image": "https://trusted-partner.avlarealestate.com/img/og-cover.jpg?v=19eylul",
   "inLanguage": "en"
 }
 </script>
@@ -809,6 +809,12 @@ nav.bar{
   padding:14px 0;border-bottom:1px solid rgba(255,255,255,.10);
 }
 .pb-list li:last-child{border-bottom:0}
+.pb-list li.kisi-sat{grid-template-columns:78px 46px 1fr;gap:14px;align-items:center}
+.pb-list .foto{width:46px;height:46px;border-radius:50%;overflow:hidden;border:1px solid rgba(201,182,138,.4);
+  background:#fff;display:block}
+.pb-list .foto img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:560px){.pb-list li.kisi-sat{grid-template-columns:62px 40px 1fr;gap:10px}
+  .pb-list .foto{width:40px;height:40px}}
 .pb-list .role{
   font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--orange);font-weight:700;
 }
@@ -876,14 +882,14 @@ nav.bar{
   position:relative;overflow:hidden;background:var(--ink);color:#fff;
   border-radius:2px;
   display:flex;flex-direction:column;
-  min-height:520px;
+  min-height:560px;
 }
 .work-card .work-img{position:absolute;inset:0;z-index:1}
 .work-card .work-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
 .work-card:hover .work-img img{transform:scale(1.05)}
 .work-card::after{
   content:"";position:absolute;inset:0;z-index:2;
-  background:linear-gradient(180deg, rgba(15,38,71,0) 0%, rgba(15,38,71,.05) 45%, rgba(10,27,52,.55) 78%, rgba(10,27,52,.78) 100%);
+  background:linear-gradient(180deg, rgba(15,38,71,0) 0%, rgba(15,38,71,.06) 34%, rgba(11,29,55,.58) 62%, rgba(8,22,44,.9) 84%, rgba(8,22,44,.95) 100%);
 }
 .work-card .work-body{
   position:relative;z-index:3;margin-top:auto;padding:28px 28px 26px;
@@ -905,6 +911,24 @@ nav.bar{
 }
 .work-card .work-loc::before{content:"";width:18px;height:1px;background:var(--gold-bright)}
 
+.work-card .work-spec{
+  position:relative;z-index:3;margin-top:16px;padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.2);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.work-card .work-spec > div{padding:0 11px;border-left:1px solid rgba(255,255,255,.16)}
+.work-card .work-spec > div:first-child{padding-left:0;border-left:0}
+.work-card .work-spec .l{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.58);line-height:1.3}
+.work-card .work-spec .v{font-size:12.5px;color:#fff;margin-top:5px;line-height:1.25;letter-spacing:.01em;text-shadow:0 1px 4px rgba(0,0,0,.7)}
+.work-card .work-spec .v.g{color:var(--gold-bright)}
+.works .kunye-not{
+  margin-top:22px;font-size:11.5px;line-height:1.7;color:var(--ink-55);
+  padding-top:16px;border-top:1px solid var(--ink-12);max-width:78ch;
+}
+@media (max-width:1080px){
+  .work-card .work-spec{grid-template-columns:1fr 1fr;row-gap:12px}
+  .work-card .work-spec > div:nth-child(2n+1){padding-left:0;border-left:0}
+}
 .works .first{grid-column:span 1;grid-row:span 2;min-height:0}
 
 @media (max-width:1080px){
@@ -1396,10 +1420,10 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
       <span class="last">Akbeniz</span>
     </h1>
     <div class="hero-event">
-      <span class="he-eye">Monthly Investor Meetings</span>
+      <span class="he-eye">19 September 2026 · Saturday</span>
       <p class="he-title">Greece Golden Visa <em>Investment Meeting</em></p>
       <p class="he-sub">Let's Find the Right Investment for You, Together</p>
-      <p class="he-info">Every month in Istanbul · By invitation · One-on-one meeting format</p>
+      <p class="he-info">InterContinental Istanbul (Taksim) · 10:30 – 19:00</p>
     </div>
     <div class="hero-actions" style="gap: 24px; margin: 36px 0px 0px">
       <a href="#davet" class="btn btn-or" style="margin: 0px; border-width: 1px">Reserve Your Spot <span class="arrow">→</span></a>
@@ -1525,23 +1549,22 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
         </div>
       </div>
 
-      <div class="event-eyebrow">MONTHLY · BY INVITATION</div>
-      <h3 class="event-title">Investor <em>Meetings</em></h3>
-      <p class="event-sub">Greece Golden Visa · Avla Real Estate</p>
+      <div class="event-eyebrow">19 SEPTEMBER 2026 · BY INVITATION</div>
+      <h3 class="event-title">Investor <em>Meeting</em></h3>
+      <p class="event-sub">Greece Golden Visa · Avla Real Estate <span style="opacity:.75">×</span> Zafido Holding Hellas</p>
 
       <div class="event-meta">
         <div>
-          <div class="k">Frequency</div>
-          <div class="v">At least once a month<br><em>Dates announced to invitees</em></div>
+          <div class="k">Date</div>
+          <div class="v">Saturday, 19 September 2026<br><em>10:30 — 19:00 · 3 sessions</em></div>
         </div>
         <div>
           <div class="k">Venue</div>
-          <div class="v">Istanbul<br><em style="white-space:nowrap">Premium hotel meeting rooms</em></div>
+          <div class="v">InterContinental Istanbul<br><em style="white-space:nowrap">Taksim · Boardroom</em></div>
         </div>
       </div>
-
-      <div class="event-cap">
-        <em>Limited seats · by invitation · one-on-one meetings — reserve your place</em>
+<div class="event-cap">
+        <em>Sessions at 11:00 · 14:00 · 17:00 — the developer is at the table and meetings are one-on-one. Seats are limited.</em>
       </div>
 
       <div class="event-actions">
@@ -1550,6 +1573,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.21 2.2z"/></svg>
           <span>Call Now</span>
         </a>
+        <a href="https://19-eylul.avlarealestate.com/en/" target="_blank" rel="noopener" class="btn btn-ghost" data-cta="event_19eylul">19 September Page <span class="arrow">→</span></a>
       </div>
     </div><!-- /.event-card -->
     </div><!-- /.event-col -->
@@ -1566,23 +1590,32 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
         <div class="pb">
           <span class="pb-eyebrow"><span class="pb-num">A</span>Attendees</span>
           <ul class="pb-list">
-            <li><span class="role">Avla</span><span class="who">M. Sami Akbeniz <em>· Co-Founder</em></span></li>
-            <li><span class="role">Avla</span><span class="who">Avla Golden Visa Advisors</span></li>
-            <li><span class="role">Guest</span><span class="who">Guest Developer of the Month <em>· project team</em></span></li>
+            <li class="kisi-sat"><span class="role">Avla</span><span class="foto"><img src="./img/kisi-sami.jpg" alt="M. Sami Akbeniz" loading="lazy" decoding="async"></span><span class="who">M. Sami Akbeniz <em>· Co-Founder</em></span></li>
+            <li class="kisi-sat"><span class="role">Avla</span><span class="foto"><img src="./img/kisi-melih.jpg" alt="A. Melih Ünver" loading="lazy" decoding="async"></span><span class="who">A. Melih Ünver</span></li>
+            <li class="kisi-sat"><span class="role">Avla</span><span class="foto"><img src="./img/kisi-alicia.jpg" alt="Alicia Karavani" loading="lazy" decoding="async"></span><span class="who">Alicia Karavani</span></li>
+            <li class="kisi-sat"><span class="role">Guest</span><span class="foto"><img src="./img/kisi-katerina.jpg" alt="Katerina Grigoriou" loading="lazy" decoding="async"></span><span class="who">Katerina Grigoriou <em>· Zafido Holding Hellas</em></span></li>
+            <li class="kisi-sat"><span class="role">Guest</span><span class="foto"><img src="./img/kisi-silan.jpg" alt="Şilan Öz" loading="lazy" decoding="async"></span><span class="who">Şilan Öz <em>· Zafido Holding Hellas</em></span></li>
           </ul>
         </div>
 
         <div class="pb">
-          <span class="pb-eyebrow"><span class="pb-num">B</span>Program &amp; Format</span>
-          <p class="pb-p">
-            We host our investor meetings <b>at least once every month</b> with invited guests. The room hosts up to <b>9 clients</b> at a time; meetings run in a <b>B2C</b> format — Avla specialists present Greece Golden Visa-focused real estate directly and provide one-on-one advisory.
-          </p>
+          <span class="pb-eyebrow"><span class="pb-num">B</span>Programme · 19 September</span>
+          <ul class="pb-list">
+            <li><span class="role">10:30</span><span class="who">Doors open <em>· welcome and file opening</em></span></li>
+            <li><span class="role">11:00</span><span class="who">First session</span></li>
+            <li><span class="role">14:00</span><span class="who">Second session <em>· same content</em></span></li>
+            <li><span class="role">17:00</span><span class="who">Third session <em>· same content</em></span></li>
+            <li><span class="role">Between</span><span class="who">One-on-one meetings <em>· after each session, at separate tables</em></span></li>
+            <li><span class="role">19:00</span><span class="who">Close <em>· a personal selection page for each completed meeting</em></span></li>
+            <li><span class="role">Room</span><span class="who">Boardroom <em>· InterContinental Istanbul (Taksim)</em></span></li>
+          </ul>
+          <p class="pb-p">All three sessions carry the same content; simply pick the time that suits you.</p>
         </div>
 
         <div class="pb">
-          <span class="pb-eyebrow"><span class="pb-num">C</span>Guest Developers</span>
+          <span class="pb-eyebrow"><span class="pb-num">C</span>Format</span>
           <p class="pb-p">
-            Each month we invite <b>at least one or two</b> of Greece's leading developers as guests. The guest developer presents their projects on terms exclusive to our meeting; our clients get <b>B2C meetings</b> and one-on-one discussions with the developer.
+            The room hosts up to <b>30 clients</b> at a time and meetings run in a <b>B2C</b> format — Avla specialists speak to you directly, with no intermediary. Our guest developer <b>Zafido Holding Hellas</b> presents its projects on terms set for this meeting; you sit at the same table with them. <b>Attendance is free of charge and seats are limited.</b>
           </p>
         </div>
       </div>
@@ -1594,14 +1627,14 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
 
 <!-- ============ GLYFADA LAUNCH CTA ============ -->
 <section class="glifada-cta-section" data-screen-label="04b Glyfada launch">
-  <a class="glifada-cta" href="https://www.youtube.com/shorts/3ms1_fwtoRk" target="_blank" rel="noopener">
-    <div class="glifada-cta-bg" style="background-image:url('./img/glifada-lansman-thumb.jpg')"></div>
+  <a class="glifada-cta" href="https://19-eylul.avlarealestate.com/en/#projeler" target="_blank" rel="noopener">
+    <div class="glifada-cta-bg" style="background-image:url('./img/pr-chalandri-1.jpg')"></div>
     <div class="glifada-cta-overlay"></div>
     <div class="glifada-cta-text">
-      <div class="glifada-cta-label">Glyfada Launch · Surprise</div>
-      <h3 class="glifada-cta-title">Glyfada <em>By the Sea</em></h3>
-      <div class="glifada-cta-sub">This month's guest — Zafido Holding Hellas' launch, exclusive to our meeting</div>
-      <div class="glifada-cta-arrow">Watch the teaser →</div>
+      <div class="glifada-cta-label">19 September Launch · For Avla Clients</div>
+      <h3 class="glifada-cta-title">Chalandri <em>Central</em></h3>
+      <div class="glifada-cta-sub">A two-building new development in North Athens — not yet on the market, all 45 apartments held by Avla</div>
+      <div class="glifada-cta-arrow">See the project →</div>
     </div>
   </a>
 </section>
@@ -1622,34 +1655,59 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
     <div class="head">
       <div>
         <span class="eyebrow"><span class="mark">●</span>&nbsp;&nbsp;Selected by Avla</span>
-        <h2>Catch the right Athens neighborhoods <em>at the right times</em>.</h2>
+        <h2>The <em>four projects</em> on the table on 19 September.</h2>
       </div>
       <p class="meta">
-        These two highlights from Avla's Greece portfolio meet the Golden Visa threshold — both suitable for investment, residence, and hybrid use.
+        All four come from the portfolio of our guest developer Zafido Holding Hellas, with Avla handling the sales. Price list, area report and feasibility are ready for each.
       </p>
     </div>
 
     <div class="works-grid">
-      <a class="work-card" href="https://south.moschato.avlarealestate.com/" target="_blank" rel="noopener">
-        <div class="work-img"><img src="./img/moschato-evening.jpg" alt="SOUTH — Moschato, Athens · Eleftheriou Venizelou"></div>
+      <a class="work-card" href="https://19-eylul.avlarealestate.com/en/#projeler" target="_blank" rel="noopener">
+        <div class="work-img"><img src="./img/pr-chalandri-1.jpg" loading="lazy" decoding="async" alt="Chalandri Central · North Athens"></div>
         <div class="work-body">
-          <span class="chip or">Active Launch</span>
-          <h3 class="work-title">South <em>Moschato</em></h3>
-          <p class="work-sub">5 min to central Athens, 1.8 km to the coast. 2nd &amp; 3rd floor launch: 18 new apartments from €258K.</p>
-          <div class="work-loc">Moschato · Athens</div>
+          <span class="chip or">Launch for Avla Clients</span>
+          <h3 class="work-title">Chalandri <em>Central</em></h3>
+          <p class="work-sub">A two-building new development, not yet on the market. Parking (except B block first floor), energy class A, 3% annual rental guarantee for 3 years.</p>
+          <div class="work-spec"><div><div class="l">Price</div><div class="v g">€267 – 400K</div></div><div><div class="l">Units</div><div class="v">45 · all held by Avla</div></div><div><div class="l">Net area</div><div class="v">38.3 – 57.3 m²</div></div><div><div class="l">Handover</div><div class="v">2028 · Q2</div></div></div>
+          <div class="work-loc">Chalandri · North Athens</div>
         </div>
       </a>
 
-      <a class="work-card" href="https://www.avlarealestate.com/en/properties/the-hera-athens-sepolia-golden-visa-yatirim-firsati" target="_blank" rel="noopener">
-        <div class="work-img"><img src="./img/op-hera.jpg" alt="The Hera Athens — central Athens, Golden Visa project"></div>
+      <a class="work-card" href="https://www.avlarealestate.com/properties/kallithea-boutique-one-bedroom-residences-near-snfcc" target="_blank" rel="noopener">
+        <div class="work-img"><img src="./img/pr-snfcc-1.jpg" loading="lazy" decoding="async" alt="Boutique residences near the SNFCC · Kallithea"></div>
         <div class="work-body">
-          <span class="chip">Investment Grade</span>
-          <h3 class="work-title">The Hera <em>Athens</em></h3>
-          <p class="work-sub">Central Athens selection, Golden Visa approved, from Avla's portfolio.</p>
-          <div class="work-loc">Central Athens · Athens</div>
+          <span class="chip">Boutique · 16 Units</span>
+          <h3 class="work-title">SNFCC <em>Residences</em></h3>
+          <p class="work-sub">A 16-unit boutique building within walking distance of the cultural centre; all one-bedroom, each with storage. Two second-floor apartments are held for you.</p>
+          <div class="work-spec"><div><div class="l">Price</div><div class="v g">€279 – 282K</div></div><div><div class="l">Units</div><div class="v">2 · held for you</div></div><div><div class="l">Net area</div><div class="v">40.8 – 41.3 m²</div></div><div><div class="l">Handover</div><div class="v">2028 · Q2</div></div></div>
+          <div class="work-loc">Kallithea · near the SNFCC</div>
+        </div>
+      </a>
+
+      <a class="work-card" href="https://www.avlarealestate.com/properties/south-glyfada-ano-glyfada-athens-riviera-golden-visa" target="_blank" rel="noopener">
+        <div class="work-img"><img src="./img/pr-glyfada-1.jpg" loading="lazy" decoding="async" alt="South Glyfada · Athens Riviera"></div>
+        <div class="work-body">
+          <span class="chip">33 Units Available</span>
+          <h3 class="work-title">South <em>Glyfada</em></h3>
+          <p class="work-sub">On the upper slope of the Riviera, within walking distance of the sea and of central Glyfada. A range running from studios to generous garden floors.</p>
+          <div class="work-spec"><div><div class="l">Price</div><div class="v g">from €261K</div></div><div><div class="l">Units</div><div class="v">33 available</div></div><div><div class="l">Net area</div><div class="v">from 34.8 m²</div></div><div><div class="l">Handover</div><div class="v">Not yet announced</div></div></div>
+          <div class="work-loc">Ano Glyfada · Athens Riviera</div>
+        </div>
+      </a>
+
+      <a class="work-card" href="https://www.avlarealestate.com/properties/el-venizelou-290-kallithea" target="_blank" rel="noopener">
+        <div class="work-img"><img src="./img/pr-kallithea-1.jpg" loading="lazy" decoding="async" alt="El. Venizelou · Kallithea"></div>
+        <div class="work-body">
+          <span class="chip or">Last 2 Duplexes</span>
+          <h3 class="work-title">El. <em>Venizelou</em></h3>
+          <p class="work-sub">On Kallithea's main artery, close to the metro and the coastal axis. Twenty of the 22 apartments are gone; the remaining two duplexes sit on floors 6–7.</p>
+          <div class="work-spec"><div><div class="l">Price</div><div class="v g">€356 – 358K</div></div><div><div class="l">Units</div><div class="v">Last 2 duplexes</div></div><div><div class="l">Net area</div><div class="v">52.8 – 54.1 m²</div></div><div><div class="l">Handover</div><div class="v">2028 · Q2</div></div></div>
+          <div class="work-loc">Kallithea · main artery</div>
         </div>
       </a>
     </div>
+    <p class="kunye-not">Prices, availability and measurements are taken from the developer's list dated <b>16 September 2026</b>; measurements may vary by ±3%. Net area is the enclosed interior and excludes balconies and parking. Handover dates follow the schedule written into each contract, and for South Glyfada no date has been announced yet. Golden Visa eligibility is determined apartment by apartment, confirmed by an independent Greek lawyer.</p>
   </div>
 </section>
 
@@ -1875,7 +1933,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
         <ul>
           <li class="office">
             <span class="city">Istanbul</span>
-            <span class="addr">Kolektif House Moda · Kadıköy<br>+90 216 470 53 81</span>
+            <span class="addr">Kolektif House Moda · Kadıköy<br>Palladium Tower · Ataşehir<br>+90 216 470 53 81</span>
           </li>
           <li class="office">
             <span class="city">Athens</span>
@@ -1883,7 +1941,7 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
           </li>
           <li class="office">
             <span class="city">Dubai</span>
-            <span class="addr">Office setup<br>in preparation.</span>
+            <span class="addr">RAKEZ Free Zone<br>Avla International Properties LLC</span>
           </li>
         </ul>
       </div>
@@ -1904,16 +1962,16 @@ posthog.init('phc_v98y5K8fmzdZsQmyqGAQ92oK73PsaxyVrXSwaYi86Cjp', {
         <ul>
           <li><a href="https://yunanistan-golden-visa.avlarealestate.com/" target="_blank" rel="noopener">Golden Visa Program</a></li>
           <li><a href="https://gv.selection.avlarealestate.com/" target="_blank" rel="noopener">Golden Visa Selection</a></li>
-          <li><a href="https://south.moschato.avlarealestate.com/?v=2345" target="_blank" rel="noopener">South · Moschato</a></li>
+          <li><a href="https://19-eylul.avlarealestate.com/en/" target="_blank" rel="noopener">19 September · Investor Meeting</a></li>
           <li><a href="https://www.avlarealestate.com/en/properties/the-hera-athens-sepolia-golden-visa-yatirim-firsati" target="_blank" rel="noopener">The Hera · Athens</a></li>
           <li><a href="https://www.avlarealestate.com/so/7ePvASSBf?languageTag=en" target="_blank" rel="noopener">Avla Quick Presentation</a></li>
         </ul>
       </div>
 
-      <a class="foot-map" href="https://gv.selection.avlarealestate.com/" target="_blank" rel="noopener" aria-label="Athens · Selection — See on map">
+      <a class="foot-map" href="https://19-eylul.avlarealestate.com/en/harita.html" target="_blank" rel="noopener" aria-label="Athens · Selection — See on map">
         <img src="./img/avla-map-cover.png" alt="Avla portfolio · Athens projects map" style="margin: 0px">
         <span class="foot-map-cap">
-          <span class="k">Athens · Selection</span>
+          <span class="k">Portfolio Map · 103 projects</span>
           <span class="v">View on map <span class="arrow">→</span></span>
         </span>
       </a>
